@@ -27,4 +27,4 @@ systemctl enable podman.socket
 ### Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install com.github.tchx84.Flatseal
+flatpak install -y com.github.tchx84.Flatseal
