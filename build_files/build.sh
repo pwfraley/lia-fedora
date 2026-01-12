@@ -25,15 +25,15 @@ dnf5 install -y libreoffice
 systemctl enable podman.socket
 
 ### Flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install -y com.github.tchx84.Flatseal
-flatpak install -y com.obsproject.Studio
-flatpak install -y com.obsproject.Studio.Plugin.AdvancedMasks
-flatpak install -y com.obsproject.Studio.Plugin.BackgroundRemoval
-flatpak install -y com.obsproject.Studio.Plugin.CompositeBlur
-flatpak install -y com.obsproject.Studio.Plugin.GStreamerVaapi
-flatpak install -y com.obsproject.Studio.Plugin.Gstreamer
-flatpak install -y com.obsproject.Studio.Plugin.OBSVkCapture
-flatpak install -y com.obsproject.Studio.Plugin.SceneSwitcher
-flatpak install -y com.obsproject.Studio.Plugin.3DEffect
+#flatpak install -y com.github.tchx84.Flatseal
+#flatpak install -y com.obsproject.Studio
+#flatpak install -y com.obsproject.Studio.Plugin.AdvancedMasks
+#flatpak install -y com.obsproject.Studio.Plugin.BackgroundRemoval
+#flatpak install -y com.obsproject.Studio.Plugin.CompositeBlur
+#flatpak install -y com.obsproject.Studio.Plugin.GStreamerVaapi
+#flatpak install -y com.obsproject.Studio.Plugin.Gstreamer
+#flatpak install -y com.obsproject.Studio.Plugin.OBSVkCapture
+#flatpak install -y com.obsproject.Studio.Plugin.SceneSwitcher
+#flatpak install -y com.obsproject.Studio.Plugin.3DEffect
