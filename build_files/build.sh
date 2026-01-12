@@ -10,7 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y gnome-shell-extension-pop-shell zsh nextcloud-client kitty fastfetch neovim
+dnf5 install -y chromium gnome-shell-extension-pop-shell zsh nextcloud-client kitty fastfetch neovim
+dnf5 install -y libreoffice
 
 # Use a COPR Example:
 #
