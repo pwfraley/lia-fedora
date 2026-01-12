@@ -13,6 +13,7 @@ set -ouex pipefail
 dnf5 group install -y development-tools
 dnf5 install -y chromium gnome-shell-extension-pop-shell zsh nextcloud-client kitty fastfetch neovim stow
 dnf5 install -y libreoffice
+dnf5 install -y distrobox
 
 # Use a COPR Example:
 #
