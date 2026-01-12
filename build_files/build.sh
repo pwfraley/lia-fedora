@@ -23,3 +23,8 @@ dnf5 install -y libreoffice
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+### Flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak add com.github.tchx84.Flatseal
