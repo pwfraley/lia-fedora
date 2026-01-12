@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y gnome-shell-extension-pop-shell zsh nextcloud-client
+dnf5 install -y gnome-shell-extension-pop-shell zsh nextcloud-client kitty fastfetch
 
 # Use a COPR Example:
 #
