@@ -1,8 +1,9 @@
 [[customizations.filesystem]]
 mountpoint = "/"
 minsize = "20 GiB"
+filesystem = "btrfs"
 
-[[customizations.filesystem]]
+[customizations.filesystem]]
 mountpoint = "/boot"
 minsize = "1 GiB"
-
+filesystem = "ext4"
