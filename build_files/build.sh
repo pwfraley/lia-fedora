@@ -12,6 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 group install -y development-tools
 dnf5 install -y chromium gnome-shell-extension-pop-shell zsh nextcloud-client kitty fastfetch neovim stow
+dnf5 install -y gnome-tweaks
 dnf5 install -y libreoffice libreoffice-langpack-de
 dnf5 install -y distrobox
 
