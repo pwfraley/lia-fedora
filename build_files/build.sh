@@ -16,6 +16,7 @@ dnf5 install -y gnome-tweaks
 dnf5 install -y libreoffice libreoffice-langpack-de
 dnf5 install -y distrobox
 dnf5 install -y dotnet-sdk-10.0
+dnf5 install -y just
 
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo > /dev/null
