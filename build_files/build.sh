@@ -19,10 +19,10 @@ dnf5 install -y dotnet-sdk-10.0
 
 # Use a COPR Example:
 #
-dnf5 -y copr enable che/nerd-fonts
-dnf5 -y install package nerd-fonts
+#dnf5 -y copr enable che/nerd-fonts
+#dnf5 -y install package nerd-fonts
 # Disable COPRs so they don't end up enabled on the final image:
-dnf5 -y copr disable che/nerd-fonts
+#dnf5 -y copr disable che/nerd-fonts
 
 #### Example for enabling a System Unit File
 
