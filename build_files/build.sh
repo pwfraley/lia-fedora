@@ -15,6 +15,7 @@ dnf5 install -y chromium gnome-shell-extension-pop-shell zsh nextcloud-client ki
 dnf5 install -y gnome-tweaks
 dnf5 install -y libreoffice libreoffice-langpack-de
 dnf5 install -y distrobox
+dnf5 install -y dotnet-sdk-10.0
 
 # Use a COPR Example:
 #
