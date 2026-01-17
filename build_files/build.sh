@@ -42,6 +42,13 @@ dnf5 -y copr enable atim/starship
 dnf5 -y install starship
 dnf5 -y copr disable atim/starship
 
+# Tela-Circle-Icons
+git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git
+cd Tela-circle-icon-theme
+./install.sh -a -d /usr/share/icons/
+cd ..
+rm -rf Tela-circle-icon-theme
+
 # Use a COPR Example:
 #
 #dnf5 -y copr enable che/nerd-fonts
