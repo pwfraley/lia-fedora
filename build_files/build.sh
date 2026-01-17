@@ -18,6 +18,23 @@ dnf5 install -y distrobox
 dnf5 install -y dotnet-sdk-10.0
 dnf5 install -y just
 
+tee /etc/yum.repos.d/netbird.repo <<EOF
+[netbird]
+name=netbird
+baseurl=https://pkgs.netbird.io/yum/
+enabled=1
+gpgcheck=0
+gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
+repo_gpgcheck=1
+EOF
+
+# dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+dnf5 check-update
+dnf5 install -y netbird libappindicator-gtk3 libappindicator netbird-ui
+
+rm /etc/yum.repos.d/netbird.repo
+
+
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo > /dev/null
 
