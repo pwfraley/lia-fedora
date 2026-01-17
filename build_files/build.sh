@@ -38,6 +38,10 @@ dnf5 install -y code
 
 rm /etc/yum.repos.d/vscode.repo
 
+dnf5 -y copr enable atim/starship
+dnf5 -y install starship
+dnf5 -y copr disable atim/starship
+
 # Use a COPR Example:
 #
 #dnf5 -y copr enable che/nerd-fonts
