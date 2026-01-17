@@ -28,7 +28,7 @@ gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
 repo_gpgcheck=1
 EOF
 
-# dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
 dnf5 check-update
 dnf5 install -y netbird libappindicator-gtk3 libappindicator netbird-ui
 
