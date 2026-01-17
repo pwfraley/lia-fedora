@@ -17,6 +17,7 @@ dnf5 install -y libreoffice libreoffice-langpack-de
 dnf5 install -y distrobox
 dnf5 install -y dotnet-sdk-10.0
 dnf5 install -y just
+dnf5 install -y atuin-all-users.noarch
 
 
 tee /etc/yum.repos.d/netbird.repo <<EOF
