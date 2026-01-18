@@ -49,6 +49,9 @@ cd Tela-circle-icon-theme
 cd ..
 rm -rf Tela-circle-icon-theme
 
+echo "PWF: "
+echo $(ls)
+
 /ctx/build_files/build-gnome-extensions.sh
 
 # Use a COPR Example:
