@@ -29,13 +29,13 @@ git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.g
 glib-compile-schemas /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/schemas
 
 # Color Picker
-git clone https://github.com/tuberry/color-picker.git ./color-picker@tuberry
-cd color-picker@tuberry
-meson setup build -Dtarget=zip && meson install -C build
-echo $(ls)
-echo $(ls build)
-cd ..
-rm -rf color-picker@tuberry
+# git clone https://github.com/tuberry/color-picker.git ./color-picker@tuberry
+# cd color-picker@tuberry
+# meson setup build -Dtarget=zip && meson install -C build
+# echo $(ls)
+# echo $(ls build)
+# cd ..
+# rm -rf color-picker@tuberry
 
 # Blur My Shell
 # make -C /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
