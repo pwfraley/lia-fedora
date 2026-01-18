@@ -31,7 +31,7 @@ glib-compile-schemas /usr/share/gnome-shell/extensions/clipboard-indicator@tudmo
 # Color Picker
 git clone https://github.com/tuberry/color-picker.git ./color-picker@tuberry
 cd color-picker@tuberry
-meson setup build -Dtarget=system && meson install
+meson setup build -Dtarget=system && meson install -C build
 cd ..
 rm -rf color-picker@tuberry
 
