@@ -12,7 +12,7 @@ echo ":: Building Extensions"
 # dnf5 -y install glib2-devel meson sassc cmake dbus-devel
 
 # Build Extensions
-
+mkdir -p /usr/share/gnome-shell/extensions
 # Alphabetical App Grid
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./AlphabeticalAppGrid@stuarthayhurst
 cd AlphabeticalAppGrid@stuarthayhurst
