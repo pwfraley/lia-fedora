@@ -24,13 +24,15 @@ cd ..
 rm -rf AlphabeticalAppGrid@stuarthayhurst
 
 # Clipboard Indicator
-git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ./clipboard-indicator@tudmotu.com
-cd clipboard-indicator@tudmotu.com
-make build
-unzip ./build/clipboard-indicator@tudmotu.com.shell-extension.zip -d /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/
+git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
 glib-compile-schemas /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/schemas
+
+# Color Picker
+git clone https://github.com/tuberry/color-picker.git ./color-picker@tuberry
+cd color-picker@tuberry
+meson setup build -Dtarget=system && meson install
 cd ..
-rm -rf clipboard-indicator@tudmotu.com
+rm -rf color-picker@tuberry
 
 # Blur My Shell
 # make -C /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
