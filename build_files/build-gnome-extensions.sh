@@ -20,7 +20,7 @@ git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./Al
 cd AlphabeticalAppGrid@stuarthayhurst
 make build
 echo $(ls build)
-unzip ./build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip /usr/share/gnome-shell/extensions/
+unzip ./build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/
 cd ..
 echo $(ls usr/share/gnome-shell/extensions)
 glib-compile-schemas /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/shemas/
