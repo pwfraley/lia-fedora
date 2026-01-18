@@ -9,20 +9,23 @@ dnf5 install -y gnome-shell-extension-pop-shell gnome-shell-extension-user-theme
 
 echo ":: Building Extensions"
 echo $(ls)
-echo $(ls ctx)
+echo $(ls usr)
+echo $(ls usr/share)
+echo $(ls usr/share/gnome-shell)
+echo $(ls usr/share/gnome-shell/extensions)
 
 # Install tooling
 # dnf5 -y install glib2-devel meson sassc cmake dbus-devel
 
 # Build Extensions
-mkdir -p /usr/share/gnome-shell/extensions
+mkdir -p usr/share/gnome-shell/extensions
 # Alphabetical App Grid
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./AlphabeticalAppGrid@stuarthayhurst
 cd AlphabeticalAppGrid@stuarthayhurst
 make build
-unzip build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip /usr/share/gnome-shell/extensions/
-glib-compile-schemas /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/shemas/
+unzip build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip usr/share/gnome-shell/extensions/
 cd ..
+glib-compile-schemas usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/shemas/
 rm -rf AlphabeticalAppGrid@stuarthayhurst
 
 # make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
