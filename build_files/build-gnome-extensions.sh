@@ -9,13 +9,13 @@ dnf5 install -y gnome-shell-extension-pop-shell gnome-shell-extension-user-theme
 
 echo ":: Building Extensions"
 # Install tooling
-dnf5 -y install glib2-devel meson sassc cmake dbus-devel
+# dnf5 -y install glib2-devel meson sassc cmake dbus-devel
 
 # Build Extensions
 
 # Alphabetical App Grid
-make -C /usr/share/gnome-shell/extensions/alphabetical-grid-extension
-unzip -o /usr/share/gnome-shell/extensions/alphabetical-grid-extension/build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
+make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
+unzip -o /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
 glib-compile-schemas --strict /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/schemas
 rm -rf /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build
 
@@ -48,7 +48,7 @@ rm /usr/share/glib-2.0/schemas/gschemas.compiled
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # Cleanup
-dnf5 -y remove glib2-devel meson sassc cmake dbus-devel
+# dnf5 -y remove glib2-devel meson sassc cmake dbus-devel
 rm -rf /usr/share/gnome-shell/extensions/tmp
 
 echo "::endgroup::"
