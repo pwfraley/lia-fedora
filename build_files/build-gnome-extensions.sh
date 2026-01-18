@@ -8,6 +8,9 @@ echo ":: Installing Fedora Extensions"
 dnf5 install -y gnome-shell-extension-pop-shell gnome-shell-extension-user-theme
 
 echo ":: Building Extensions"
+echo $(ls)
+echo $(ls ctx)
+
 # Install tooling
 # dnf5 -y install glib2-devel meson sassc cmake dbus-devel
 
