@@ -14,21 +14,28 @@ echo ":: Building Extensions"
 # Build Extensions
 
 # Alphabetical App Grid
-make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
-unzip -o /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
-glib-compile-schemas --strict /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/schemas
-rm -rf /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build
+git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./AlphabeticalAppGrid@stuarthayhurst
+cd AlphabeticalAppGrid@stuarthayhurst
+make build
+make install
+cd ..
+rm -rf AlphabeticalAppGrid@stuarthayhurst
+
+# make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
+# unzip -o /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
+# glib-compile-schemas --strict /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/schemas
+# rm -rf /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build
 
 
 # Blur My Shell
-make -C /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
-unzip -o /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/build/blur-my-shell@aunetx.shell-extension.zip -d /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
-glib-compile-schemas --strict /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/schemas
-rm -rf /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/build
+# make -C /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
+# unzip -o /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/build/blur-my-shell@aunetx.shell-extension.zip -d /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
+# glib-compile-schemas --strict /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/schemas
+# rm -rf /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/build
 
 # Dash to Dock
-make -C /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com
-glib-compile-schemas --strict /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/schemas
+# make -C /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com
+# glib-compile-schemas --strict /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/schemas
 
 # GSConnect (commented out until G49 support)
 # meson setup --prefix=/usr /usr/share/gnome-shell/extensions/gsconnect@andyholmes.github.io /usr/share/gnome-shell/extensions/gsconnect@andyholmes.github.io/_build
