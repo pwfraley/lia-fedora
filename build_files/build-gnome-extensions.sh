@@ -23,11 +23,14 @@ glib-compile-schemas /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuar
 cd ..
 rm -rf AlphabeticalAppGrid@stuarthayhurst
 
-# make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
-# unzip -o /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
-# glib-compile-schemas --strict /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/schemas
-# rm -rf /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/build
-
+# Clipboard Indicator
+git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ./clipboard-indicator@tudmotu.com
+cd clipboard-indicator@tudmotu.com
+make build
+unzip ./build/clipboard-indicator@tudmotu.com.shell-extension.zip -d /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/
+glib-compile-schemas /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/schemas
+cd ..
+rm -rf clipboard-indicator@tudmotu.com
 
 # Blur My Shell
 # make -C /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
