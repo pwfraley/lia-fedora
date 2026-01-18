@@ -8,7 +8,6 @@ echo ":: Installing Fedora Extensions"
 dnf5 install -y gnome-shell-extension-pop-shell gnome-shell-extension-user-theme
 
 echo ":: Building Extensions"
-echo $(ls usr/share/gnome-shell/extensions)
 
 # Install tooling
 # dnf5 -y install glib2-devel meson sassc cmake dbus-devel
@@ -19,11 +18,10 @@ echo $(ls usr/share/gnome-shell/extensions)
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./AlphabeticalAppGrid@stuarthayhurst
 cd AlphabeticalAppGrid@stuarthayhurst
 make build
-echo $(ls build)
 unzip ./build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip -d /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/
-cd ..
-echo $(ls usr/share/gnome-shell/extensions)
+echo $(ls /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst)
 glib-compile-schemas /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst/shemas/
+cd ..
 rm -rf AlphabeticalAppGrid@stuarthayhurst
 
 # make -C /usr/share/gnome-shell/extensions/AlphabeticalAppGrid@stuarthayhurst
