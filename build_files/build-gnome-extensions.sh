@@ -17,7 +17,7 @@ echo ":: Building Extensions"
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git ./AlphabeticalAppGrid@stuarthayhurst
 cd AlphabeticalAppGrid@stuarthayhurst
 make build
-make install
+unzip build/AlphabeticalAppGrid@stuarthayhurst.shell-extension.zip /usr/share/gnome-shell/
 cd ..
 rm -rf AlphabeticalAppGrid@stuarthayhurst
 
