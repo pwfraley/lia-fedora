@@ -2,7 +2,6 @@
 FROM scratch AS ctx
 COPY build_files /
 COPY /system_files /system_files
-COPY --from=common /system_files/shared /system_files/shared
 
 # Base Image
 # FROM ghcr.io/ublue-os/bazzite:stable
