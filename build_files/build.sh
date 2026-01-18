@@ -49,6 +49,8 @@ cd Tela-circle-icon-theme
 cd ..
 rm -rf Tela-circle-icon-theme
 
+/ctx/build_files/build-gnome-extensions.sh
+
 # Use a COPR Example:
 #
 #dnf5 -y copr enable che/nerd-fonts
