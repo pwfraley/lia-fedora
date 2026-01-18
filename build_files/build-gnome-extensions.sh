@@ -11,6 +11,7 @@ echo ":: Building Extensions"
 
 # Install tooling
 # dnf5 -y install glib2-devel meson sassc cmake dbus-devel
+dnf5 -y install meson
 
 # Build Extensions
 
@@ -63,6 +64,8 @@ glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # Cleanup
 # dnf5 -y remove glib2-devel meson sassc cmake dbus-devel
+dnf5 -y remove meson
+
 rm -rf /usr/share/gnome-shell/extensions/tmp
 
 echo "::endgroup::"
