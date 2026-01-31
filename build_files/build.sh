@@ -42,9 +42,9 @@ dnf5 -y copr enable atim/starship
 dnf5 -y install starship
 dnf5 -y copr disable atim/starship
 
-dnf5 -y config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
-dnf5 -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-systemctl enable --now docker
+# dnf5 -y config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
+# dnf5 -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# systemctl enable --now docker
 
 # Tela-Circle-Icons
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git
