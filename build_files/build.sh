@@ -30,18 +30,19 @@ gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
 repo_gpgcheck=1
 EOF
 
+dnf5 update --refresh
+
 ### Does not seem to work
 ### After Boot
 ### rpm-ostree install netbird
 # dnf5 install -y netbird
 # rm /etc/yum.repos.d/netbird.repo
-dnf5 update --refresh
 
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo > /dev/null
 
 dnf5 check-update
-dnf5 install -y code
+dnf5 -y install code
 
 rm /etc/yum.repos.d/vscode.repo
 
