@@ -29,8 +29,8 @@ gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
 repo_gpgcheck=1
 EOF
 
-dnf5 -y config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
-dnf5 update --refresh
+# dnf5 -y config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+# dnf5 update --refresh
 
 ### Does not seem to work
 ### After Boot
