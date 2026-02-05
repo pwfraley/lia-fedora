@@ -19,7 +19,6 @@ dnf5 install -y dotnet-sdk-10.0
 dnf5 install -y just
 dnf5 install -y atuin-all-users.noarch
 
-
 tee /etc/yum.repos.d/netbird.repo <<EOF
 [netbird]
 name=netbird
@@ -30,6 +29,7 @@ gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
 repo_gpgcheck=1
 EOF
 
+dnf5 -y config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
 dnf5 update --refresh
 
 ### Does not seem to work
