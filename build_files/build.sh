@@ -14,6 +14,7 @@ dnf5 group install -y development-tools
 dnf5 install -y chromium zsh nextcloud-client kitty fastfetch neovim stow cmatrix libvirt virt-manager
 dnf5 install -y gnome-tweaks
 # dnf5 install -y libreoffice libreoffice-langpack-de
+dnf5 install -y syncthing
 dnf5 install -y distrobox
 dnf5 install -y dotnet-sdk-10.0
 dnf5 install -y just
