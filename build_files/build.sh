@@ -126,3 +126,6 @@ N9upIgHMcIcOhzwPbxEguOAwvduqmrzdh1K1HnMj4UTraGHOaO7fXxGqdVFzAbI=
 EOF
 
 update-ca-trust
+
+# max watches for syncthing
+echo "fs.inotify.max_user_watches=204800" | sudo tee -a /etc/sysctl.d/90-override.conf
